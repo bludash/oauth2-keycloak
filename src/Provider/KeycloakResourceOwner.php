@@ -44,6 +44,16 @@ class KeycloakResourceOwner implements ResourceOwnerInterface
     }
 
     /**
+     * Get resource owner email status
+     *
+     * @return string|null
+     */
+    public function getEmailVerified()
+    {
+        return $this->response['email_verified'] ?: null;
+    }
+
+    /**
      * Get resource owner name
      *
      * @return string|null
@@ -51,6 +61,36 @@ class KeycloakResourceOwner implements ResourceOwnerInterface
     public function getName()
     {
         return $this->response['name'] ?: null;
+    }
+
+    /**
+     * Get resource owner given name
+     *
+     * @return string|null
+     */
+    public function getGivenName()
+    {
+        return $this->response['given_name'] ?: null;
+    }
+
+    /**
+     * Get resource owner family name
+     *
+     * @return string|null
+     */
+    public function getFamilyName()
+    {
+        return $this->response['family_name'] ?: null;
+    }
+
+    /**
+     * Get resource owner preferred username
+     *
+     * @return string|null
+     */
+    public function getPreferredUsername()
+    {
+        return $this->response['preferred_username'] ?: null;
     }
 
     /**
